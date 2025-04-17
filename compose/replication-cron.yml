@@ -6,3 +6,4 @@ services:
   musicbrainz:
     volumes:
       - ${MUSICBRAINZ_CRONTAB_PATH:-./default/replication.cron}:/crons.conf
+      - ./build/musicbrainz/scripts/update-materialized.sh:/usr/local/bin/update-materialized.sh
